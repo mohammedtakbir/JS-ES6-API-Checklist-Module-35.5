@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!--? ১০. সিরিয়াস প্রাকটিস -->
+    <!--? মডিউল 34 ভালো করে দেখে ফেলো। বিশেষ করে the meal db রি তারপরে আরো সময় থাকলে এর আরেকটা খালতো ভাই the coktaildb থেকে কিছু জিনিস এনে দেখাবে। একজাক্টলি কি দেখাতে হবে। সেটা আমি বলে দিবো না। তুমি ওদের ওয়েবসাইট এ যাও। সেখানে কি কি লেখা আছে সেগুলা পড়ো। api গুলা এর ছোট করে কি কি করে বলা আছে। সেগুলা দেখো। তারপর কিছু ডাটা লোড করো। সেই ডাটাগুলো দেখাও। এইখানে সার্চ ফাংশনালিটি ইমপ্লিমেন্ট করো। অনেকটা mealdb এর মতো। আবার কোন একটাতে ক্লিক করলে সেটার ডিটেল দেখাবে।  -->
+
+    <header class="my-5">
+        <h1 class="text-center">Welcome to my <span class="text-success">Phone Hunter!!!</span></h1>
+    </header>
+    <main class="container">
+
+        <!--* search field -->
+        <section>
+            <div class="d-flex w-50 mx-auto">
+                <input type="tel" name="" id="search-field" class="form-control" placeholder="Search your phone">
+                <button id="search-btn" class="ms-2 btn btn-success w-50">Search</button>
+            </div>
+        </section>
+
+        <!--* message for invalid search -->
+        <section>
+            <h5 id="invalid-search" class="text-danger text-center mt-4 d-none">No phone found.Please try again...</h5>
+        </section>
+
+        <!--* spinner -->
+        <section id="spinner" class="d-none">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;"
+                class="">
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+
+        <!--* phones container -->
+        <section class="my-5">
+            <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
+
+            </div>
+        </section>
+        <!--* showAll -->
+        <section class="my-5">
+            <div id="show-all" class="d-none text-center">
+                <button id="show-all-btn" class="btn btn-success">Show All</button>
+            </div>
+        </section>
+    </main>
+
+
+    <!--* Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img id="phone-img" alt="" class="mx-auto">
+                </div>
+                <div id="phone-feature" class="modal-body">
+                    <h5 class="modal-title d-block" id="exampleModalLabel"></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
